@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Professional portfolio of Aditya Kumar Srivastava, Assistant Professor with experience across management education, financial analysis, career guidance, and civil engineering.">
+  <meta name="theme-color" content="#14243a">
+  <title>Aditya Kumar Srivastava | Professional Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:#14243a; --navy-2:#203a55; --teal:#3d8b8b; --teal-light:#dff1ef;
+      --bg:#f5f7fa; --surface:#fff; --text:#202b38; --muted:#687586;
+      --border:#e2e8f0; --shadow:0 18px 50px rgba(20,36,58,.08);
+      --radius:20px; --header-h:76px;
+    }
+    [data-theme="dark"] {
+      --bg:#0c1420; --surface:#121f2e; --text:#edf3f8; --muted:#a7b5c5;
+      --border:#26374a; --teal-light:#193c3e; --shadow:0 18px 50px rgba(0,0,0,.2);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 18px)}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.65;transition:background .25s,color .25s}
+    a{color:inherit;text-decoration:none}
+    button,a{ -webkit-tap-highlight-color:transparent}
+    button{font:inherit}
+    :focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+    .container{width:min(1120px,calc(100% - 40px));margin-inline:auto}
+    .topbar{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(18px);border-bottom:1px solid color-mix(in srgb,var(--border) 78%,transparent)}
+    .nav{height:var(--header-h);display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:11px;font-family:Manrope,sans-serif;font-weight:800;letter-spacing:-.04em;white-space:nowrap}
+    .brand-mark{width:39px;height:39px;border-radius:13px;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:.9rem;letter-spacing:-.04em}
+    .nav-links{display:flex;align-items:center;gap:20px}
+    .nav-links a{font-size:.88rem;font-weight:600;color:var(--muted);transition:color .2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--teal)}
+    .nav-actions{display:flex;align-items:center;gap:10px}
+    .icon-btn,.menu-btn{width:42px;height:42px;border:1px solid var(--border);border-radius:13px;background:var(--surface);color:var(--text);display:grid;place-items:center;cursor:pointer}
+    .menu-btn{display:none}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 17px;border:1px solid transparent;border-radius:12px;font-weight:700;font-size:.92rem;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--navy);color:#fff;box-shadow:0 9px 22px rgba(20,36,58,.16)}
+    .btn-primary:hover{background:var(--navy-2)}
+    .btn-outline{border-color:var(--border);background:var(--surface);color:var(--text)}
+    .btn-teal{background:var(--teal);color:#fff}
+    .hero{padding:78px 0 66px;position:relative;overflow:hidden}
+    .hero:before{content:"";position:absolute;width:450px;height:450px;border-radius:50%;background:radial-gradient(circle,var(--teal-light),transparent 68%);right:-100px;top:-100px;pointer-events:none}
+    .hero-grid{position:relative;display:grid;grid-template-columns:1.35fr .65fr;gap:56px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:7px 12px;border-radius:999px;background:var(--teal-light);color:var(--teal);font-size:.78rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase}
+    .eyebrow-dot{width:7px;height:7px;border-radius:50%;background:var(--teal)}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,h3{font-family:Manrope,sans-serif;letter-spacing:-.045em}
+    h1{font-size:clamp(2.6rem,5vw,4.6rem);line-height:1.06;margin:20px 0 19px;max-width:760px}
+    .hero h1 span{color:var(--teal)}
+    .hero-lead{font-size:1.12rem;color:var(--muted);max-width:660px;margin-bottom:27px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:11px}
+    .quick-facts{display:flex;gap:22px;flex-wrap:wrap;margin-top:28px;color:var(--muted);font-size:.9rem}
+    .quick-facts span{display:flex;align-items:center;gap:8px}
+    .quick-facts svg{color:var(--teal)}
+    .profile-card{justify-self:end;width:min(100%,330px);position:relative}
+    .profile-frame{padding:12px;border:1px solid var(--border);border-radius:28px;background:var(--surface);box-shadow:var(--shadow);transform:rotate(2deg)}
+    .profile-frame img{display:block;width:100%;aspect-ratio:4/4.8;object-fit:cover;object-position:center;border-radius:19px;background:var(--bg)}
+    .profile-caption{position:absolute;left:-36px;bottom:25px;padding:14px 17px;border:1px solid var(--border);background:var(--surface);border-radius:15px;box-shadow:var(--shadow);transform:rotate(-2deg)}
+    .profile-caption strong{display:block;font-family:Manrope,sans-serif;font-size:.96rem}
+    .profile-caption small{color:var(--muted)}
+    .section{padding:76px 0}
+    .section.alt{background:color-mix(in srgb,var(--surface) 55%,var(--bg))}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:30px}
+    .section-kicker{color:var(--teal);font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}
+    h2{font-size:clamp(1.9rem,3.2vw,2.65rem);line-height:1.15;margin-bottom:0}
+    .section-intro{max-width:490px;color:var(--muted);margin-bottom:2px}
+    .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+    .panel,.info-card,.timeline-card,.project-card,.skill-panel,.contact-card{border:1px solid var(--border);background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .panel{padding:29px}
+    .panel p{color:var(--muted);margin-bottom:0}
+    .fact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}
+    .info-card{padding:20px}
+    .info-card .icon{width:42px;height:42px;border-radius:13px;background:var(--teal-light);color:var(--teal);display:grid;place-items:center;margin-bottom:14px}
+    .info-card strong{display:block;font-family:Manrope,sans-serif;font-size:1rem;margin-bottom:3px}
+    .info-card span{color:var(--muted);font-size:.86rem}
+    .timeline{display:grid;gap:16px;position:relative}
+    .timeline-card{padding:24px 26px;display:grid;grid-template-columns:180px 1fr;gap:24px}
+    .timeline-date{font-size:.85rem;font-weight:800;color:var(--teal);padding-top:4px}
+    .role-top{display:flex;align-items:start;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .role-top h3{font-size:1.15rem;margin:0 0 4px}
+    .org{color:var(--muted);font-weight:600;font-size:.93rem}
+    .type-tag{background:var(--teal-light);color:var(--teal);border-radius:999px;padding:5px 10px;font-size:.73rem;font-weight:800;white-space:nowrap}
+    .timeline-card p{color:var(--muted);margin:12px 0 0}
+    .timeline-card ul{color:var(--muted);padding-left:19px;margin:12px 0 0}
+    .education-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .education-card{padding:25px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface)}
+    .education-year{color:var(--teal);font-size:.82rem;font-weight:800;letter-spacing:.06em}
+    .education-card h3{font-size:1.12rem;margin:10px 0 7px}
+    .education-card p{color:var(--muted);margin:0}
+    .grade{display:inline-block;margin-top:17px;padding:7px 11px;background:var(--bg);border:1px solid var(--border);border-radius:9px;font-size:.82rem;font-weight:800}
+    .skill-toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+    .filter-btn{border:1px solid var(--border);background:var(--surface);color:var(--muted);border-radius:999px;padding:9px 14px;font-size:.84rem;font-weight:700;cursor:pointer}
+    .filter-btn.active,.filter-btn:hover{background:var(--navy);border-color:var(--navy);color:#fff}
+    .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .skill-panel{padding:23px}
+    .skill-panel h3{font-size:1rem;margin-bottom:15px}
+    .skill-tags{display:flex;flex-wrap:wrap;gap:8px}
+    .skill-tag{font-size:.81rem;padding:7px 10px;background:var(--bg);border:1px solid var(--border);border-radius:9px;color:var(--text)}
+    .skill-panel[hidden]{display:none}
+    .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .project-card{padding:25px;position:relative;overflow:hidden;transition:transform .2s,border-color .2s}
+    .project-card:hover{transform:translateY(-4px);border-color:var(--teal)}
+    .project-number{font-family:Manrope,sans-serif;font-size:.78rem;font-weight:800;color:var(--teal);letter-spacing:.1em}
+    .project-card h3{font-size:1.18rem;margin:14px 0 9px}
+    .project-card p{color:var(--muted);margin:0}
+    .project-meta{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:20px;padding-top:15px;border-top:1px solid var(--border);font-size:.82rem;color:var(--muted)}
+    .project-meta span:last-child{font-weight:800;color:var(--teal)}
+    .achievements-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .achievement{padding:23px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface)}
+    .achievement .icon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:var(--teal-light);color:var(--teal);margin-bottom:16px}
+    .achievement h3{font-size:1.04rem;margin-bottom:7px}
+    .achievement p{font-size:.9rem;color:var(--muted);margin-bottom:0}
+    .contact-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px}
+    .contact-copy{padding:29px 0}
+    .contact-copy p{color:var(--muted);max-width:420px;margin-top:16px}
+    .contact-card{padding:25px;display:grid;gap:13px}
+    .contact-link{display:flex;align-items:center;gap:14px;padding:15px;border:1px solid var(--border);border-radius:13px;transition:border-color .2s,transform .2s}
+    .contact-link:hover{border-color:var(--teal);transform:translateX(3px)}
+    .contact-link .icon{width:42px;height:42px;border-radius:12px;background:var(--teal-light);color:var(--teal);display:grid;place-items:center;flex-shrink:0}
+    .contact-link strong{display:block;font-size:.9rem}
+    .contact-link small{color:var(--muted);overflow-wrap:anywhere}
+    .footer{padding:28px 0;border-top:1px solid var(--border)}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:.85rem}
+    .footer-links{display:flex;gap:16px;flex-wrap:wrap}
+    .footer a:hover{color:var(--teal)}
+    .back-top{position:fixed;right:22px;bottom:22px;width:45px;height:45px;border:0;border-radius:14px;background:var(--navy);color:#fff;box-shadow:var(--shadow);cursor:pointer;opacity:0;pointer-events:none;transform:translateY(8px);transition:.2s;z-index:40}
+    .back-top.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media(max-width:980px){.nav-links{gap:12px}.nav-links a{font-size:.82rem}.hero-grid{gap:32px}.profile-card{width:270px}.skills-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:760px){
+      :root{--header-h:68px}.container{width:min(100% - 30px,600px)}
+      .nav-actions>.btn{display:none}.menu-btn{display:grid}
+      .nav-links{display:none;position:absolute;top:calc(var(--header-h) - 1px);left:0;right:0;padding:14px 20px 20px;background:var(--surface);border-bottom:1px solid var(--border);box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:0}
+      .nav-links.open{display:flex}.nav-links a{padding:12px 8px;font-size:.94rem;border-bottom:1px solid var(--border)}.nav-links a:last-child{border-bottom:0}
+      .hero{padding:48px 0 55px}.hero-grid{grid-template-columns:1fr;gap:36px}.profile-card{justify-self:center;width:min(72%,280px);grid-row:1}.profile-caption{left:-22px;bottom:16px}h1{font-size:clamp(2.5rem,12vw,3.8rem)}
+      .section{padding:58px 0}.section-head{display:block}.section-intro{margin-top:14px}
+      .about-grid,.contact-wrap{grid-template-columns:1fr}.timeline-card{grid-template-columns:1fr;gap:8px;padding:21px}.education-grid,.projects-grid{grid-template-columns:1fr}.achievements-grid{grid-template-columns:1fr}.skills-grid{grid-template-columns:1fr}
+      .contact-copy{padding:0}.quick-facts{gap:14px}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Aditya Kumar Srivastava, home"><span class="brand-mark">AS</span><span>Aditya Srivastava</span></a>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#achievements">Highlights</a><a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Switch to dark mode" title="Toggle theme">
+          <svg id="themeIcon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.64 5.64l1.42 1.42m9.88 9.88 1.42 1.42m0-12.72-1.42 1.42m-9.88 9.88-1.42 1.42"/><circle cx="12" cy="12" r="4"/></svg>
+        </button>
+        <a class="btn btn-primary" href="assets/Aditya_Kumar_Srivastava_Resume.pdf" download>Download CV <span aria-hidden="true">↗</span></a>
+        <button class="menu-btn" id="menuToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open navigation menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> Management Education · Finance · Emerging Technology</div>
+          <h1>Aditya Kumar <span>Srivastava</span></h1>
+          <p class="hero-lead">Assistant Professor with an MBA in Finance &amp; IT, combining management education, financial analysis, career guidance, and an engineering background.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#experience">Explore Experience <span aria-hidden="true">↘</span></a>
+            <a class="btn btn-outline" href="#contact">Get in touch</a>
+          </div>
+          <div class="quick-facts">
+            <span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> Lucknow, Uttar Pradesh</span>
+            <span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16v14H4z"/><path d="m4 7 8 6 8-6"/></svg> <a href="mailto:Reach.adityasri@gmail.com">Reach.adityasri@gmail.com</a></span>
+          </div>
+        </div>
+        <div class="profile-card reveal">
+          <div class="profile-frame"><img src="assets/aditya-profile.png" alt="Professional portrait of Aditya Kumar Srivastava"></div>
+          <div class="profile-caption"><strong>Teaching &amp; Analysis</strong><small>Management · Finance · AI</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="section-kicker">Profile</div><h2>About me</h2></div><p class="section-intro">A multidisciplinary background spanning management, finance, career development, and civil engineering.</p></div>
+        <div class="about-grid">
+          <article class="panel reveal">
+            <p>MBA graduate with a background in financial modelling, AI-driven market analysis, and Generative AI applications in business. My experience includes teaching Marketing and Finance, developing career guidance content for MBA and engineering aspirants, and supporting financial reporting and analysis. I am interested in applying analytical rigour and practical examples to teaching, student development, and business problem-solving.</p>
+          </article>
+          <div class="fact-grid">
+            <article class="info-card reveal"><div class="icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V8l8-5 8 5v12"/><path d="M9 20v-6h6v6M2 20h20"/></svg></div><strong>Management Education</strong><span>Marketing and Finance</span></article>
+            <article class="info-card reveal"><div class="icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 6-7"/></svg></div><strong>Financial Analysis</strong><span>Modelling, reporting, research</span></article>
+            <article class="info-card reveal"><div class="icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4 7v5c0 5 8 9 8 9s8-4 8-9V7l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg></div><strong>Career Development</strong><span>Resume, communication, interviews</span></article>
+            <article class="info-card reveal"><div class="icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg></div><strong>Technology</strong><span>Python, data analysis, Generative AI</span></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="experience">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="section-kicker">Career</div><h2>Professional experience</h2></div><p class="section-intro">Teaching, entrepreneurship, financial analysis, and engineering-related experience, as documented in my resume.</p></div>
+        <div class="timeline">
+          <article class="timeline-card reveal">
+            <div class="timeline-date">Sep 2026 – Present</div>
+            <div><div class="role-top"><div><h3>Assistant Professor</h3><div class="org">IISE Group of Institutions, Lucknow</div></div><span class="type-tag">Education</span></div><ul><li>Deliver lectures in Marketing and Finance using practical examples and interactive teaching methodologies.</li><li>Plan and conduct student development workshops on self-introduction, professional communication, ATS-friendly resume building, and interview preparation.</li></ul></div>
+          </article>
+          <article class="timeline-card reveal">
+            <div class="timeline-date">Aug 2025 – Present</div>
+            <div><div class="role-top"><div><h3>Founder</h3><div class="org">CareerCure.in</div></div><span class="type-tag">Entrepreneurship</span></div><p>Founded an ed-tech career guidance platform for MBA and engineering aspirants, developing structured job modules, study plans, and conceptual frameworks that reflect curriculum design and instructional content delivery.</p></div>
+          </article>
+          <article class="timeline-card reveal">
+            <div class="timeline-date">Jul 2024 – Aug 2024</div>
+            <div><div class="role-top"><div><h3>Financial Analysis Intern</h3><div class="org">Shakti Saran and Company</div></div><span class="type-tag">Finance</span></div><p>Analysed financial statements, performed variance analysis, and prepared management reports, strengthening applied knowledge of financial accounting, reporting, and business decision-making.</p></div>
+          </article>
+          <article class="timeline-card reveal">
+            <div class="timeline-date">Jun 2022 – Aug 2023</div>
+            <div><div class="role-top"><div><h3>QA/QC Assistant</h3><div class="org">Service Care Limited</div></div><span class="type-tag">Quality</span></div><p>Role and employment dates are listed in the supplied resume; additional responsibilities were not specified.</p></div>
+          </article>
+          <article class="timeline-card reveal">
+            <div class="timeline-date">Jun 2021 – Aug 2021</div>
+            <div><div class="role-top"><div><h3>Graduate Engineering Trainee</h3><div class="org">PD PWD Gorakhpur</div></div><span class="type-tag">Engineering</span></div><p>Role and employment dates are listed in the supplied resume; additional responsibilities were not specified.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="section-kicker">Qualifications</div><h2>Education</h2></div><p class="section-intro">Academic qualifications listed in the supplied resume.</p></div>
+        <div class="education-grid">
+          <article class="education-card reveal"><div class="education-year">2025 · Gorakhpur</div><h3>Master of Business Administration</h3><p>Madan Mohan Malaviya University of Technology</p><p>Specialization: Finance &amp; IT</p><span class="grade">79.3%</span></article>
+          <article class="education-card reveal"><div class="education-year">2022 · Lucknow</div><h3>Bachelor of Technology</h3><p>Seth Vishwambhar Nath Institute of Engineering &amp; Technology</p><p>Specialization: Civil Engineering</p><span class="grade">75%</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="skills">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="section-kicker">Capabilities</div><h2>Core competencies</h2></div><p class="section-intro">Select a category to focus on relevant skills. No proficiency scores are assigned.</p></div>
+        <div class="skill-toolbar" role="group" aria-label="Filter skill categories">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">All skills</button>
+          <button class="filter-btn" data-filter="finance" aria-pressed="false">Finance &amp; Research</button>
+          <button class="filter-btn" data-filter="technology" aria-pressed="false">Technology &amp; Data</button>
+          <button class="filter-btn" data-filter="academic" aria-pressed="false">Academic &amp; Professional</button>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-panel reveal" data-category="finance"><h3>Finance &amp; Research</h3><div class="skill-tags"><span class="skill-tag">Financial Modeling &amp; Forecasting</span><span class="skill-tag">Financial Reporting &amp; Analysis</span><span class="skill-tag">Budgeting &amp; Cost Optimization</span><span class="skill-tag">Regulatory Research &amp; Compliance</span><span class="skill-tag">Investment Research</span><span class="skill-tag">Risk Management</span><span class="skill-tag">Business Research Methodology</span></div></article>
+          <article class="skill-panel reveal" data-category="technology"><h3>Technology &amp; Data</h3><div class="skill-tags"><span class="skill-tag">Excel &amp; Financial Reporting Tools</span><span class="skill-tag">Python &amp; Data Analysis</span><span class="skill-tag">Generative AI Prompt Engineering</span><span class="skill-tag">LLM Applications in Finance &amp; Education</span></div></article>
+          <article class="skill-panel reveal" data-category="academic"><h3>Academic &amp; Professional</h3><div class="skill-tags"><span class="skill-tag">Academic Writing</span><span class="skill-tag">Case Study Development</span><span class="skill-tag">Report Writing</span><span class="skill-tag">Stakeholder Management</span><span class="skill-tag">Cross-Functional Collaboration</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="section-kicker">Selected work</div><h2>Projects</h2></div><p class="section-intro">Project titles and dates are reproduced from the resume. Detailed descriptions and external links were not provided.</p></div>
+        <div class="projects-grid">
+          <article class="project-card reveal"><div class="project-number">PROJECT 01</div><h3>AI &amp; ML for Stock Market Prediction and Sentiment Analysis</h3><p>A project focused on the intersection of AI, machine learning, stock-market prediction, and sentiment analysis.</p><div class="project-meta"><span>2025</span><span>AI · Finance</span></div></article>
+          <article class="project-card reveal"><div class="project-number">PROJECT 02</div><h3>Civil Engineering Projects</h3><p>A collection of civil engineering project work listed in the supplied resume. Specific project details were not provided.</p><div class="project-meta"><span>2022 – 2023</span><span>Engineering</span></div></article>
+          <article class="project-card reveal"><div class="project-number">PROJECT 03</div><h3>Zero Energy Building</h3><p>A project listed in the resume, reflecting an interest in energy-conscious building concepts.</p><div class="project-meta"><span>2022</span><span>Built Environment</span></div></article>
+          <article class="project-card reveal"><div class="project-number">PROJECT 04</div><h3>1000 sq foot Residential House</h3><p>A residential house project listed in the supplied resume. Further scope and deliverables were not specified.</p><div class="project-meta"><span>2018</span><span>Residential Design</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="achievements">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="section-kicker">Additional information</div><h2>Workshops &amp; highlights</h2></div><p class="section-intro">Professional and academic activities documented in the resume.</p></div>
+        <div class="achievements-grid">
+          <article class="achievement reveal"><div class="icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></div><h3>Workshop on Research Methodology</h3><p>Workshop listed in the supplied resume.</p></article>
+          <article class="achievement reveal"><div class="icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg></div><h3>Pride of SVNIET</h3><p>Institutional recognition for outstanding academic and co-curricular performance.</p></article>
+          <article class="achievement reveal"><div class="icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/><circle cx="12" cy="12" r="10"/></svg></div><h3>Industrial Visits</h3><p>Live exposure to manufacturing operations and supply chain management.</p></article>
+          <article class="achievement reveal"><div class="icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3V9Z"/></svg></div><h3>Zero Energy Building Webinar</h3><p>Webinar listed in the supplied resume.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-wrap">
+        <div class="contact-copy reveal"><div class="section-kicker">Contact</div><h2>Let’s connect.</h2><p>For academic opportunities, collaboration, career guidance, or professional enquiries, use one of the direct contact links.</p><a class="btn btn-primary" href="mailto:Reach.adityasri@gmail.com?subject=Professional%20Enquiry">Email me <span aria-hidden="true">↗</span></a></div>
+        <div class="contact-card reveal">
+          <a class="contact-link" href="mailto:Reach.adityasri@gmail.com"><span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span><strong>Email</strong><small>Reach.adityasri@gmail.com</small></span></a>
+          <a class="contact-link" href="tel:+917849961270"><span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.9L7.1 10.5a16 16 0 0 0 6 6l1.9-1.9a2 2 0 0 1 1.9-.6l3 .5a2 2 0 0 1 2.1 2.4Z"/></svg></span><span><strong>Phone</strong><small>+91 7849961270</small></span></a>
+          <a class="contact-link" href="https://www.linkedin.com/in/aditsri" target="_blank" rel="noopener noreferrer"><span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6ZM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></span><span><strong>LinkedIn</strong><small>linkedin.com/in/aditsri</small></span></a>
+          <a class="contact-link" href="assets/Aditya_Kumar_Srivastava_Resume.pdf" download><span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5M12 15V3"/></svg></span><span><strong>Download resume</strong><small>PDF document</small></span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Aditya Kumar Srivastava</span>
+      <div class="footer-links"><a href="#home">Home</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a><a href="#home">Back to top ↑</a></div>
+      <span>Built for clarity and connection.</span>
+    </div>
+  </footer>
+  <button class="back-top" id="backTop" aria-label="Back to top" title="Back to top">↑</button>
+
+  <script>
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const savedTheme = (() => { try { return localStorage.getItem('aditya-portfolio-theme'); } catch(e) { return null; } })();
+    if (savedTheme === 'dark') root.dataset.theme = 'dark';
+    function updateThemeButton() {
+      const dark = root.dataset.theme === 'dark';
+      themeToggle.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+      themeIcon.innerHTML = dark
+        ? '<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/>'
+        : '<path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z"/>';
+    }
+    updateThemeButton();
+    themeToggle.addEventListener('click', () => {
+      root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      try { localStorage.setItem('aditya-portfolio-theme', root.dataset.theme); } catch(e) {}
+      updateThemeButton();
+    });
+
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(open));
+      menuToggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+    });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      navLinks.classList.remove('open'); menuToggle.setAttribute('aria-expanded','false');
+    }));
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const backTop = document.getElementById('backTop');
+    window.addEventListener('scroll', () => backTop.classList.toggle('show', window.scrollY > 450), {passive:true});
+    backTop.addEventListener('click', () => window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));
+
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target);} });
+    }, {threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    const sections = [...document.querySelectorAll('main section[id]')];
+    const sectionObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          navLinks.querySelectorAll('a').forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id));
+        }
+      });
+    }, {rootMargin:'-30% 0px -60% 0px',threshold:0});
+    sections.forEach(section => sectionObserver.observe(section));
+
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('.filter-btn').forEach(b => { const active=b===btn; b.classList.toggle('active',active); b.setAttribute('aria-pressed',String(active)); });
+      document.querySelectorAll('.skill-panel').forEach(panel => panel.hidden = filter !== 'all' && panel.dataset.category !== filter);
+    }));
+  </script>
+</body>
+</html>
